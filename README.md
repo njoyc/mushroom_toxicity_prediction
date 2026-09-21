@@ -1,4 +1,4 @@
-````markdown
+
 # 🍄 Mushroom Toxicity Prediction
 
 A machine learning web application that predicts whether a mushroom is **Toxic** or **Non-Toxic** based on its physical characteristics.
@@ -82,19 +82,19 @@ The target class is represented numerically:
 
 ### Home Page
 
-![Mushroom Toxicity Prediction - Home Page](static/images/home-page.png)
+![Mushroom Toxicity Prediction - Home Page](Mushroom_toxicity_prediction/static/images/home-page.png)
 
 ### Example Prediction Input
 
-![Mushroom Toxicity Prediction - Input](static/images/details.png)
+![Mushroom Toxicity Prediction - Input](Mushroom_toxicity_prediction/static/images/details.png)
 
 ### Toxic Prediction
 
-![Mushroom Toxicity Prediction - Toxic Result](static/images/toxic.png)
+![Mushroom Toxicity Prediction - Toxic Result](Mushroom_toxicity_prediction/static/images/toxic.png)
 
 ### Non-Toxic Prediction
 
-![Mushroom Toxicity Prediction - Non-Toxic Result](static/images/non-toxic.png)
+![Mushroom Toxicity Prediction - Non-Toxic Result](Mushroom_toxicity_prediction/static/images/non-toxic.png)
 
 ---
 
@@ -258,6 +258,4 @@ GitHub:
 GitHub:
 [https://github.com/njoyc](https://github.com/njoyc)
 
-```
-And yes: **the four screenshots you selected are all included in this version.**
 ```
