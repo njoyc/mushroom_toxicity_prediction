@@ -249,13 +249,5 @@ The CSV contains the numerical feature values used by the Random Forest classifi
 GitHub:
 [https://github.com/njoyc/mushroom_toxicity_prediction](https://github.com/njoyc/mushroom_toxicity_prediction)
 
----
-
-## 👩‍💻 Author
-
-**Joy Christiana Nelapati**
-
-GitHub:
-[https://github.com/njoyc](https://github.com/njoyc)
 
 ```
