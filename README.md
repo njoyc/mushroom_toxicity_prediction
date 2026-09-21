@@ -82,19 +82,19 @@ The target class is represented numerically:
 
 ### Home Page
 
-![Mushroom Toxicity Prediction - Home Page](images/home-page.png)
+![Mushroom Toxicity Prediction - Home Page](static/images/home-page.png)
 
 ### Example Prediction Input
 
-![Mushroom Toxicity Prediction - Input](images/details.png)
+![Mushroom Toxicity Prediction - Input](static/images/details.png)
 
 ### Toxic Prediction
 
-![Mushroom Toxicity Prediction - Toxic Result](images/toxic.png)
+![Mushroom Toxicity Prediction - Toxic Result](static/images/toxic.png)
 
 ### Non-Toxic Prediction
 
-![Mushroom Toxicity Prediction - Non-Toxic Result](images/non-toxic.png)
+![Mushroom Toxicity Prediction - Non-Toxic Result](static/images/non-toxic.png)
 
 ---
 
