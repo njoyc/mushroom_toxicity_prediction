@@ -1,94 +1,263 @@
+````markdown
 # 🍄 Mushroom Toxicity Prediction
 
-A machine learning web app that predicts whether a mushroom is **edible or poisonous** based on its physical characteristics. Built using **Flask** and **Scikit-learn**, the app leverages a **Random Forest** classifier trained on the popular UCI Mushroom dataset, achieving over **99% accuracy**.
+A machine learning web application that predicts whether a mushroom is **Toxic** or **Non-Toxic** based on its physical characteristics.
 
-## 🔍 About the Project
-
-Mushroom foraging can be dangerous if toxic species are misidentified. This project helps users assess mushroom edibility by providing a simple interface for prediction using trained machine learning models.
-
-### 🧠 Features
-- Predicts mushroom edibility (edible/poisonous) based on user input.
-- Interactive web UI built with Flask.
-- Uses a Random Forest model trained on categorical mushroom traits.
-- Deployed for real-time usage.
-- High prediction accuracy (~99%).
-
-## 🚀 Demo
- 
-📂 [GitHub Repository](https://github.com/njoyc/mushroom_toxicity_prediction)
-
-## ⚙️ Tech Stack
-
-- **Python**
-- **Flask**
-- **Scikit-learn**
-- **HTML/CSS**
-- **Jupyter Notebook**
-
-## 📊 Dataset
-
-- **Source**: [UCI Mushroom Dataset](https://archive.ics.uci.edu/ml/datasets/mushroom)
-- **Records**: 8,124 mushrooms
-- **Features**: 22 categorical features (e.g., cap shape, color, odor)
-
-## 🏗️ How to Run Locally
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/njoyc/mushroom_toxicity_prediction.git
-   cd mushroom_toxicity_prediction
-````
-
-2. Create and activate a virtual environment:
-
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # For Windows: venv\Scripts\activate
-   ```
-
-3. Install dependencies:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. Run the Flask app:
-
-   ```bash
-   python app.py
-   ```
-
-5. Open in browser: `http://localhost:5000`
-
-## 📈 Model Performance
-
-* **Model**: Random Forest Classifier
-* **Accuracy**: 99.3%
-* **Training Time**: \~1 second
-
-## 📌 Screenshots
-
-![App Screenshot](screenshots/predict_form.png)
-*Prediction form UI*
-
-![Prediction Result](screenshots/result.png)
-*Prediction result displayed after submission*
-
-## 🙌 Acknowledgments
-
-* [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/mushroom)
-* Scikit-learn documentation
-* Flask web framework
-
-## 📬 Contact
-
-**Author**: [@njoyc](https://github.com/njoyc)
-📧 Email: [your.email@example.com](mailto:your.email@example.com)
+The application uses a **Random Forest Classifier** trained on a mushroom dataset and provides a Flask-based web interface for making predictions.
 
 ---
 
-> ⚠️ Disclaimer: This tool is for educational purposes only. Do not consume wild mushrooms based solely on its predictions.
+## 📌 Project Overview
 
+The goal of this project is to build a machine learning application that can classify mushrooms based on their characteristics.
+
+The user provides information about the mushroom through a web form, including:
+
+- Cap diameter
+- Cap shape
+- Gill attachment
+- Gill color
+- Stem height
+- Stem width
+- Stem color
+- Season
+
+The Flask application converts these inputs into numerical features and passes them to the Random Forest model. The model then predicts whether the mushroom belongs to the Toxic or Non-Toxic class.
+
+---
+
+## 🚀 Features
+
+- 🌐 Flask-based web interface
+- 🤖 Random Forest classification model
+- 🍄 Mushroom toxicity prediction
+- 📊 Eight input features
+- 🔄 Real-time prediction through the web form
+- 🎨 Simple user interface
+- ✅ Toxic / Non-Toxic prediction result
+
+---
+
+## 🛠️ Technologies Used
+
+- **Python**
+- **Flask**
+- **Pandas**
+- **Scikit-learn**
+- **Random Forest**
+- **HTML**
+- **CSS**
+- **Jupyter Notebook**
+
+---
+
+## 🧠 Machine Learning Model
+
+The project uses a **Random Forest Classifier** for binary classification.
+
+The dataset contains eight input features and one target column:
+
+| Feature | Description |
+|---|---|
+| Cap Diameter | Diameter of the mushroom cap |
+| Cap Shape | Shape of the mushroom cap |
+| Gill Attachment | Type of gill attachment |
+| Gill Color | Color of the gills |
+| Stem Height | Height of the mushroom stem |
+| Stem Width | Width of the mushroom stem |
+| Stem Color | Color of the stem |
+| Season | Season associated with the observation |
+| Class | Target variable |
+
+The target class is represented numerically:
+
+```text
+0 → Non-Toxic
+1 → Toxic
+````
+
+---
+
+## 🖥️ Application Screenshots
+
+### Home Page
+
+![Mushroom Toxicity Prediction - Home Page](images/home-page.png)
+
+### Example Prediction Input
+
+![Mushroom Toxicity Prediction - Input](images/details.png)
+
+### Toxic Prediction
+
+![Mushroom Toxicity Prediction - Toxic Result](images/toxic.png)
+
+### Non-Toxic Prediction
+
+![Mushroom Toxicity Prediction - Non-Toxic Result](images/non-toxic.png)
+
+---
+
+## 🔄 Application Workflow
+
+```text
+User enters mushroom characteristics
+              ↓
+       Flask web application
+              ↓
+     Input values are encoded
+              ↓
+       Random Forest Model
+              ↓
+        Model prediction
+              ↓
+     ┌────────┴────────┐
+     ↓                 ↓
+  Toxic            Non-Toxic
 ```
 
+---
 
+## 📂 Project Structure
+
+```text
+mushroom_toxicity_prediction/
+│
+├── Mushroom_toxicity_prediction/
+│   │
+│   ├── static/
+│   │   └── images/
+│   │
+│   ├── templates/
+│   │   ├── index.html
+│   │   └── result.html
+│   │
+│   ├── Mushroom_classification2.ipynb
+│   ├── app.py
+│   └── mushroom_cleaned2.csv
+│
+├── images/
+│   ├── home-page.png
+│   ├── details.png
+│   ├── toxic.png
+│   └── non-toxic.png
+│
+└── README.md
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/njoyc/mushroom_toxicity_prediction.git
+```
+
+### 2. Navigate to the project directory
+
+```bash
+cd mushroom_toxicity_prediction
+cd Mushroom_toxicity_prediction
+```
+
+### 3. Create a virtual environment
+
+```bash
+python -m venv venv
+```
+
+### 4. Activate the virtual environment
+
+#### Windows
+
+```bash
+venv\Scripts\activate
+```
+
+#### macOS / Linux
+
+```bash
+source venv/bin/activate
+```
+
+### 5. Install dependencies
+
+```bash
+pip install Flask pandas scikit-learn
+```
+
+### 6. Run the application
+
+```bash
+python app.py
+```
+
+### 7. Open the application
+
+Open your browser and visit:
+
+```text
+http://127.0.0.1:5000
+```
+
+---
+
+## 🔮 Making a Prediction
+
+1. Open the application in your browser.
+2. Enter the mushroom's cap diameter.
+3. Select the cap shape.
+4. Select the gill attachment.
+5. Select the gill color.
+6. Enter the stem height.
+7. Enter the stem width.
+8. Select the stem color.
+9. Select the season.
+10. Click **Predict**.
+11. The application displays either **Toxic** or **Non-Toxic**.
+
+---
+
+## 📓 Machine Learning Notebook
+
+The project includes the Jupyter Notebook:
+
+```text
+Mushroom_classification2.ipynb
+```
+
+The notebook contains the machine learning work associated with the project, while `app.py` provides the Flask web interface used to make predictions.
+
+---
+
+## 📄 Dataset
+
+The dataset used by the Flask application is:
+
+```text
+mushroom_cleaned2.csv
+```
+
+The CSV contains the numerical feature values used by the Random Forest classifier along with the target `class` column.
+
+---
+
+## 🔗 Repository
+
+GitHub:
+[https://github.com/njoyc/mushroom_toxicity_prediction](https://github.com/njoyc/mushroom_toxicity_prediction)
+
+---
+
+## 👩‍💻 Author
+
+**Joy Christiana Nelapati**
+
+GitHub:
+[https://github.com/njoyc](https://github.com/njoyc)
+
+```
+And yes: **the four screenshots you selected are all included in this version.**
+```
